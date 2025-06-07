@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FAQ content</title>
+<style>
+    .container{
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .container h2{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .faq-items{
+        margin-top: 16px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        box-shadow: 0 1px 2px black;
+        font-size: small;
+    }
+    .toggle{
+        display: none;
+    }
+    .toggle:checked +.faq-header +.faq-answer{
+        display: block;
+    }
+    .faq-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        position: relative;
+        padding: 5px 15px;
+        font-size: 14px;
+
+    }
+    .faq-answer{
+        display: none;
+        padding: 12px 14px;
+        font-size: 12px;
+    }
+    .faq-items .icon::after{
+        content: "+";
+        font-size: 16px;
+    }
+    .toggle:checked +.faq-header .icon::after{
+        content: "-";
+    }
+    
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>
+        Frequently asked questions
+    </h2> 
+   <div class="faq-items">
+    <input type="checkbox" class="toggle" id="faq1">
+    <label for="faq1" class="faq-header">
+    <span>Where you exicute html programs?</span>
+    <span class="icon"> </span>
+    <div class="faq-answer">
+        The html programs will exicute either in note pad or in vs code (visual code)
+    </div>
+   </div>  
+
+<div class="faq-items">
+    <input type="checkbox" class="toggle" id="faq2">
+    <label for="faq2" class="faq-header">
+    <span> Can we display a web page inside a web page or Is nesting of webpages possible?</span>
+    <span class="icon"> </span>
+    </label>
+    <div class="faq-answer">
+        Yes, we can display a web page inside another HTML web page. HTML provides a tag <iframe> using which we can achieve this functionality.
+    </div>
+   </div>
+
+   <div class="faq-items">
+    <input type="checkbox" class="toggle" id="faq3">
+    <label for="faq3" class="faq-header">
+    <span>What are void elements in HTML?</span>
+    <span class="icon"> </span>
+    <div class="faq-answer">
+       HTML elements which do not have closing tags or do not need to be closed are Void elements.   
+    </div>
+   </div>  
+</div>  
+</body>
+</html>
